@@ -1,2 +1,2 @@
-privateTalk
+private talk
 ===========
