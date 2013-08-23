@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+if [ ! -f install ]; then
+echo 'install must be run within its container folder' 1>&2
+exit 1
+fi
+
+CUR_DIR=`pwd`
+OLD_GOPATH="$GOPATH"
+export GOPATH="$CUR_DIR"
+
+go install config 
+
+export GOPATH="$OLD_GOPATH"
+
+echo 'finished'
